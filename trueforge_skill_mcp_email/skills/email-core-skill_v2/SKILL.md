@@ -1,28 +1,78 @@
 ---
-name: email-core-skill
-description: Coordinates Resulticks Email setup, state and lifecycle through the Skill+MCP POC without LangGraph orchestration. Use when a user starts, continues, reviews, or asks the current state of an Email communication; delegate catalogue, creative, preview, and approval details to the matching installed skills.
+name: email-core-skill-v2
+description: Starts and manages the Resulticks Email communication lifecycle, session state, setup review and confirmation. Use this FIRST for any new Email communication request.
 ---
 
-# Resulticks Email Core
+# Email Core Skill
 
-## Purpose
-Use this skill as the top-level operating guide for the Email Skill+MCP POC. TrueForge owns the conversational agent loop; MCP tools own trusted data/actions; the existing LangGraph graph is not part of this POC path.
+Use this skill FIRST whenever the user wants to create, start, continue, review, or manage an Email communication.
 
-## Non-negotiable rules
-1. Work only on the `EMAIL` channel in this POC.
-2. Start with `email_start_session` and keep the returned `spaceid` unchanged for the whole communication.
-3. Before asking for a value, call `email_get_state` when the current state is uncertain. Never re-ask a value already present and validated.
-4. Never invent Product, Sub-product, Communication Type, Audience, Template, Campaign ID, Channel Detail ID, Approval Status, or backend success.
-5. Use catalogue validation tools before persisting catalogue-backed user values.
-6. Ask one focused missing question at a time, but accept several values when the user provides them together.
-7. Keep normal conversational responses concise and natural. Do not expose MCP tool names unless the user asks for technical details.
-8. The MCP result is authoritative. If a tool reports failure or ambiguity, explain that result and ask only for the required correction.
-9. A schedule/publish/send-later request must enter the Email RFA/approval flow. Do not claim direct scheduling.
+## Source of truth
 
-## Setup sequence
-The minimum validated Email setup is Audience, Product, and Communication Type. Sub-product is optional unless explicitly supplied/selected. Other defaults such as goal, benchmark, start date, and end date can come from the existing setup-default layer and remain editable.
+The Resulticks Email MCP tools and their responses are authoritative.
 
-When the required setup values are valid:
-1. Call `email_review_setup` to show Communication Details.
-2. Wait for explicit confirmation or a concrete edit.
-3. After confirmation, follow the Email creative skill to choose Generate, Upload, or Existing EDM.
+Never invent:
+- session state
+- IDs
+- communication details
+- catalogue values
+- workflow status
+- draft status
+- approval status
+
+## New Email communication
+
+When the user asks to create/start an Email communication:
+
+1. Call `email_start_session`.
+2. Reuse the returned `spaceid` for the entire Email lifecycle.
+3. Call `email_get_state` when the current workflow state is required.
+4. Determine which required setup information is missing.
+5. Use the appropriate specialised skill/tool for that missing information.
+6. Never create fake selectable values from model knowledge.
+
+Loading this skill is NOT completion of the request.
+
+After loading this skill, continue executing the necessary MCP tools.
+
+## Existing session
+
+If a session already exists:
+
+- Do not unnecessarily create another session.
+- Reuse the existing `spaceid`.
+- Call `email_get_state` to understand the current state when necessary.
+- Continue from the existing workflow state.
+
+## Setup management
+
+Use:
+
+- `email_update_setup` to update collected setup information.
+- `email_review_setup` to retrieve/review communication setup.
+- `email_confirm_setup` only when the user confirms the setup.
+
+Do not mark setup as confirmed unless the user has actually confirmed it.
+
+## Workflow behaviour
+
+Follow the MCP-returned state.
+
+Do not:
+- skip required stages
+- assume that setup is complete
+- assume that a draft exists
+- assume that approval has happened
+- schedule directly when approval is required
+- invent successful tool results
+
+If required information is missing, ask only for the relevant missing information.
+
+## Error handling
+
+Never tell the user there is a connectivity/system issue unless an MCP tool actually returns a connectivity/system error.
+
+If an MCP tool fails:
+- report the actual failure clearly
+- do not invent a successful result
+- do not fabricate alternative business data
