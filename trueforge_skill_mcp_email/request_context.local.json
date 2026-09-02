@@ -1,0 +1,216 @@
+{
+  "t1": "KIo",
+  "b1": "m",
+  "spaceid": "04junaa002",
+  "prompt": "AL_Genie_Test_Audience",
+  "timestamp": "2026-05-27 08: 43: 21",
+  "userid": 9235,
+  "selectedmodelid": 3,
+  "currentchatid": "#KIomhJUEPBfdGL",
+  "nextchatid": "#KIomhJUEPBfdGZ",
+  "filenamelist": [],
+  "reqs": "uvoEo9v6nBZ6gxva6wqn5OZl5KltD5YYve/rkdnrPR8=",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIgIiwianRpIjoiNmE5NGJjMzQtZTliYi00NmFlLWIyMjktM2RmNzMxMDIzYjYxIiwic2NvcGUiOiJyZWFkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3Nzk4NzQ1MzgsImlzcyI6Ik15QXV0aFNlcnZlciIsImF1ZCI6IlJFU1VMIn0.ZC_-H57udAlUlvitFzEn0kFOggNdKqar-mz-4oxEBEE",
+  "req": {
+    "userprompt": "Create a SDC web push communication for personal loan using AL_Genie - Test Users Adhoc 1919 list",
+    "departmentId": 6,
+    "clientId": 3827,
+    "userId": 9235,
+    "spaceid": "03jun1022",
+    "selectedmodelid": 3,
+    "currentChatID": "#KIomhJUEPBfdGL",
+    "nextChatID": "#KIomhJUEPBfdGZ",
+    "encodedData": "",
+    "filenamelist": [],
+    "referer": "https: //reacuix.resul.io/",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIgIiwianRpIjoiNmE5NGJjMzQtZTliYi00NmFlLWIyMjktM2RmNzMxMDIzYjYxIiwic2NvcGUiOiJyZWFkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3Nzk4NzQ1MzgsImlzcyI6Ik15QXV0aFNlcnZlciIsImF1ZCI6IlJFU1VMIn0.ZC_-H57udAlUlvitFzEn0kFOggNdKqar-mz-4oxEBEE",
+    "reqs": "uvoEo9v6nBZ6gxva6wqn5OZl5KltD5YYve/rkdnrPR8=",
+    "userManifestModel": {
+      "userInfo": {
+        "UserID": 9235,
+        "ClientID": 3826,
+        "RoleID": 4,
+        "parentClientId": 3826,
+        "PhoneNo": "8686065717",
+        "FirstName": "Vision Bank",
+        "LastName": "Resul User",
+        "TimezoneName": "(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi ",
+        "AddressLine": null,
+        "Email": "visionbankr5user@resulticksmail.com",
+        "profilePath": null,
+        "DateFormatID": 2,
+        "UserStatusID": null,
+        "industryId": null,
+        "TimeFormatID": 2,
+        "IsAgency": false,
+        "IsclientUser": false,
+        "IsHybrid": false,
+        "IspartnerDigipop": false,
+        "TimeZoneID": 64,
+        "countryCodemobile": null,
+        "ActivationDate": "2025-09-02T04:36:03",
+        "BusinessTypeID": null,
+        "CurrencyID": null,
+        "CreatedDate": null,
+        "PaymentTerms": null,
+        "countryId": 3,
+        "UserTypeID": 4,
+        "StatusID": null,
+        "AccessToken": "Pm2/Y4YAjqUl8pbbnjjE7oron/ku97lK6hlFWcMFVFEWATICnhdZqHSM/NXSTiPZx29xsw==",
+        "CheckSetup": null,
+        "languageFormat": null,
+        "otpenableforclient": false,
+        "iscaPortal": false,
+        "AuthenticationKey": null,
+        "IsAuthenticationQRScan": null,
+        "IsProfileUpdate": null,
+        "IsDayLight": false
+      },
+      "clientInfo": {
+        "ClientID": 3827,
+        "tokenExpiry": "2026-05-27 08:42:27",
+        "ClientName": "Vision Bank Inc",
+        "TenantID": "9041cdcc_d558_4065_8931_c81689dc3148",
+        "TenantShortCode": "KIo",
+        "BusinessUnitShortCode": "m",
+        "TimeZoneID": 64,
+        "HID": null,
+        "DateFormatID": 2,
+        "TimeFormatID": 2,
+        "ServerIP": "10.101.3.2",
+        "DatabaseName": "cust_9041cdcc_d558_4065_8931_c81689dc3148",
+        "IsAgency": false,
+        "LicenseTypeID": "3",
+        "BusinessTypeID": 2,
+        "ActivationDate": null,
+        "StatusID": 3,
+        "DatabaseID": null,
+        "IndustryID": 7,
+        "IsActivated": true,
+        "IsPayment": false,
+        "LicenseKey": null,
+        "Plain_LicenseKey": null,
+        "ParentClientID": 3826,
+        "IsDBCreated": false,
+        "DepartmentID": 6,
+        "DepartmentName": "Loans-Genie",
+        "IsAdminActive": false,
+        "Iscreated": null,
+        "IsAdminPayment": false,
+        "issiteMaintenance": false,
+        "IsEnterprisePlus": false,
+        "CountryId": null
+      },
+      "serverInfo": [
+        {
+          "ServerIP": "10.101.3.2",
+          "DatabaseName": "cust_9041cdcc_d558_4065_8931_c81689dc3148",
+          "DBType": "cust"
+        },
+        {
+          "ServerIP": "10.101.3.2",
+          "DatabaseName": "camp_9041cdcc_d558_4065_8931_c81689dc3148",
+          "DBType": "camp"
+        },
+        {
+          "ServerIP": "10.101.3.2",
+          "DatabaseName": "offr_9041cdcc_d558_4065_8931_c81689dc3148",
+          "DBType": "offr"
+        },
+        {
+          "ServerIP": "10.101.3.2",
+          "DatabaseName": "aud_9041cdcc_d558_4065_8931_c81689dc3148",
+          "DBType": "aud"
+        },
+        {
+          "ServerIP": "10.101.3.2",
+          "DatabaseName": "cust_9041cdcc_d558_4065_8931_c81689dc3148",
+          "DBType": "cust"
+        }
+      ],
+      "departmentList": [
+        {
+          "DepartmentId": 6,
+          "clientId": null,
+          "brandId": null,
+          "brandName": null,
+          "DepartmentName": "Loans-Genie",
+          "uiprintableName": null,
+          "IsRFA": false,
+          "IsGenieEnabled": true
+        },
+        {
+          "DepartmentId": 3,
+          "clientId": null,
+          "brandId": null,
+          "brandName": null,
+          "DepartmentName": "Banking",
+          "uiprintableName": null,
+          "IsRFA": false,
+          "IsGenieEnabled": false
+        },
+        {
+          "DepartmentId": 2,
+          "clientId": null,
+          "brandId": null,
+          "brandName": null,
+          "DepartmentName": "Cards",
+          "uiprintableName": null,
+          "IsRFA": false,
+          "IsGenieEnabled": false
+        },
+        {
+          "DepartmentId": 1,
+          "clientId": null,
+          "brandId": null,
+          "brandName": null,
+          "DepartmentName": "Loans",
+          "uiprintableName": null,
+          "IsRFA": false,
+          "IsGenieEnabled": false
+        },
+        {
+          "DepartmentId": 4,
+          "clientId": null,
+          "brandId": null,
+          "brandName": null,
+          "DepartmentName": "Accounts",
+          "uiprintableName": null,
+          "IsRFA": false,
+          "IsGenieEnabled": false
+        }
+      ],
+      "accountAdmin": {
+        "ClientId": 3826,
+        "ClientName": "Vision Group LTD"
+      },
+      "clientList": [
+        {
+          "ClientId": 3827,
+          "ClientName": "Vision Bank Inc",
+          "LogoPath": null,
+          "TenantShortCode": null,
+          "IsEnterprisePlus": false,
+          "StatusId": null,
+          "hid": 0,
+          "IsDayLight": 0,
+          "IsAudEnabled": 0
+        }
+      ],
+      "permissionList": [],
+      "invoiceinfo": {
+        "orderId": null,
+        "frequency": null,
+        "amount": null,
+        "salePrice": null,
+        "commitmentTerms": null,
+        "paymentTerms": null
+      },
+      "analyticsList": [],
+      "TimezoneName": null,
+      "CustTenant": null
+    }
+  },
+  "edmHTML": "",
+  "uploadedFile": []
+}

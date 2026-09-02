@@ -1,0 +1,21 @@
+version: 1
+channel: EMAIL
+required_setup_fields:
+  - audience
+  - product_or_offer
+  - communication_type
+rules:
+  validate_catalogue_values: true
+  setup_review_before_creative: true
+  explicit_creative_source_required: true
+  test_preview_requires_saved_draft: true
+  rfa_requires_saved_draft: true
+  rfa_requires_approver_email: true
+  rfa_requires_schedule_datetime: true
+  direct_email_scheduling: false
+  schedule_requests_enter_rfa_flow: true
+  edits_after_rfa_require_new_approval: true
+notes:
+  - TrueForge Skills own conversational orchestration in this POC.
+  - MCP tools retain deterministic validation and execution guards.
+  - Resulticks APIs remain the backend source of truth.

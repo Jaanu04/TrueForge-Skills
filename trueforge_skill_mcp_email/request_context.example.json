@@ -1,0 +1,26 @@
+{
+  "t1": "YOUR_TENANT_SHORT_CODE",
+  "b1": "YOUR_BUSINESS_UNIT_SHORT_CODE",
+  "authorization": "PASTE_CURRENT_BEARER_TOKEN_HERE",
+  "reqs": "PASTE_CURRENT_REQS_TOKEN_HERE",
+  "userid": 0,
+  "selectedmodelid": 3,
+  "req": {
+    "departmentId": 0,
+    "clientId": 0,
+    "userId": 0,
+    "selectedmodelid": 3,
+    "authorization": "PASTE_CURRENT_BEARER_TOKEN_HERE",
+    "reqs": "PASTE_CURRENT_REQS_TOKEN_HERE",
+    "userManifestModel": {
+      "userInfo": {"UserID": 0, "ClientID": 0, "UserTypeID": 0, "TimeZoneID": 64},
+      "clientInfo": {"ClientID": 0, "DepartmentID": 0, "TenantShortCode": "YOUR_TENANT_SHORT_CODE", "BusinessUnitShortCode": "YOUR_BUSINESS_UNIT_SHORT_CODE", "TimeZoneID": 64, "ServerIP": "YOUR_CUST_SERVER_IP", "DatabaseName": "YOUR_CUST_DATABASE"},
+      "serverInfo": [
+        {"ServerIP": "YOUR_CUST_SERVER_IP", "DatabaseName": "YOUR_CUST_DATABASE", "DBType": "cust"},
+        {"ServerIP": "YOUR_CAMP_SERVER_IP", "DatabaseName": "YOUR_CAMP_DATABASE", "DBType": "camp"},
+        {"ServerIP": "YOUR_OFFR_SERVER_IP", "DatabaseName": "YOUR_OFFR_DATABASE", "DBType": "offr"},
+        {"ServerIP": "YOUR_AUD_SERVER_IP", "DatabaseName": "YOUR_AUD_DATABASE", "DBType": "aud"}
+      ]
+    }
+  }
+}
