@@ -44,6 +44,20 @@ If a session already exists:
 - Call `email_get_state` to understand the current state when necessary.
 - Continue from the existing workflow state.
 
+Never ask the user to provide a spaceid.
+
+spaceid is an internal workflow/session identifier.
+
+If no spaceid exists for the current Email conversation:
+1. Call email_start_session.
+2. Store the returned spaceid.
+3. Reuse that same spaceid for all subsequent Email MCP calls.
+
+If a spaceid already exists in the current session, reuse it.
+
+Do not describe spaceid as a Resulticks workspace/account identifier.
+Do not expose spaceid as a required business input to the user.
+
 ## Setup management
 
 Use:
