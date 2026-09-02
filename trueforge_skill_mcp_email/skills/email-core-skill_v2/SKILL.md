@@ -25,7 +25,8 @@ Never invent:
 When the user asks to create/start an Email communication:
 
 1. Call `email_start_session`.
-2. Reuse the returned `spaceid` for the entire Email lifecycle.
+2. Never ask the user for spaceid.If no spaceid exists, call email_start_session and use the returned spaceid internally.
+   Reuse the same spaceid for all subsequent Email MCP calls in that communication lifecycle.
 3. Call `email_get_state` when the current workflow state is required.
 4. Determine which required setup information is missing.
 5. Use the appropriate specialised skill/tool for that missing information.
@@ -44,19 +45,6 @@ If a session already exists:
 - Call `email_get_state` to understand the current state when necessary.
 - Continue from the existing workflow state.
 
-Never ask the user to provide a spaceid.
-
-spaceid is an internal workflow/session identifier.
-
-If no spaceid exists for the current Email conversation:
-1. Call email_start_session.
-2. Store the returned spaceid.
-3. Reuse that same spaceid for all subsequent Email MCP calls.
-
-If a spaceid already exists in the current session, reuse it.
-
-Do not describe spaceid as a Resulticks workspace/account identifier.
-Do not expose spaceid as a required business input to the user.
 
 ## Setup management
 
