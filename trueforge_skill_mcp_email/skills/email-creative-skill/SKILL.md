@@ -1,6 +1,6 @@
 ---
 name: email-creative-skill
-description: Manages the Resulticks Email creative lifecycle after setup is validated: Communication Details confirmation, Generate New EDM, Uploaded EDM HTML, Existing EDM templates, preview, edit, and revert. Use when an Email user confirms setup or asks to create, change, view, or select creative content.
+description: Manages the Resulticks Email creative lifecycle after setup is validated- Communication Details confirmation, Generate New EDM, Uploaded EDM HTML, Existing EDM templates, preview, edit, and revert. Use when an Email user confirms setup or asks to create, change, view, or select creative content.
 ---
 
 # Email Creative
