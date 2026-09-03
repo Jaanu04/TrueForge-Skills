@@ -66,3 +66,20 @@ If preview/test-send fails:
 - show the actual MCP/tool failure
 - do not claim that it was sent
 - do not fabricate delivery confirmation
+  Never invent or use a dummy test-preview recipient.
+
+When the user requests a test preview:
+
+1. Check whether a user-provided test recipient already exists in the current session.
+2. If no test recipient exists, ask:
+   "Which email address should I send the test preview to?"
+3. STOP and wait for the user's response.
+4. Use exactly the Email address supplied by the user.
+5. Call email_send_test_preview only after receiving the recipient.
+
+Never use:
+- test@example.com
+- dummy@example.com
+- example@gmail.com
+- hardcoded recipients
+- model-generated Email addresses
