@@ -25,12 +25,26 @@ Never invent:
 When the user asks to create/start an Email communication:
 
 1. Call `email_start_session`.
-2. Never ask the user for spaceid.If no spaceid exists, call email_start_session and use the returned spaceid internally.
+2. Never ask the user for spaceid.
+   If no spaceid exists, call `email_start_session` and use the returned spaceid internally.
    Reuse the same spaceid for all subsequent Email MCP calls in that communication lifecycle.
 3. Call `email_get_state` when the current workflow state is required.
 4. Determine which required setup information is missing.
-5. Use the appropriate specialised skill/tool for that missing information.
-6. Never create fake selectable values from model knowledge.
+
+5. If required setup information is missing, ask the user directly for those missing business values.
+
+   Do not expose internal workflow actions such as:
+   - Validate components
+   - Check configuration
+   - Validate setup
+   - Execute validation
+
+   If Product, Communication Type, Audience, or any other required user-provided value is missing, ask the user for that value directly.
+
+   Internal validation must be performed using MCP tools and must not be presented as an action for the user.
+
+6. Use the appropriate specialised skill/tool for that missing information.
+7. Never create fake selectable values from model knowledge.
 
 Loading this skill is NOT completion of the request.
 
