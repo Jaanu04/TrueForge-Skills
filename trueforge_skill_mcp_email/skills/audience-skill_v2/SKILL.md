@@ -20,13 +20,22 @@ Never invent:
 
 ## Audience selection
 
-When Audience is missing:
+Audience selection always requires explicit user choice.
 
-1. Call `email_list_audiences`.
-2. Show only Audience values returned by MCP.
-3. Allow the user to choose one of the returned values.
-4. Validate the selected/provided value using `email_validate_audience`.
-5. Preserve the validated Audience information for the current Email session.
+When Audience is missing:
+1. Call email_list_audiences.
+2. Show the returned Audience options to the user.
+3. STOP and wait for the user to select/provide an Audience.
+4. Only after the user responds, call email_validate_audience.
+
+Never:
+- automatically select the first Audience
+- randomly select an Audience
+- assume an Audience
+- choose an Audience based on Product
+- treat email_list_audiences as user selection
+
+If multiple Audience values are returned, explicit user selection is mandatory.
 
 ## User-provided Audience
 
