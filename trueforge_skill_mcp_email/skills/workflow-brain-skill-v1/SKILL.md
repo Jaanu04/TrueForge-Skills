@@ -1,5 +1,5 @@
 ---
-name: workflow-brain-skill-v1
+name: workflow-brain-skill-v2
 description: Mandatory first-entry orchestration Skill for every Resulticks Email business request. It checks MCP workflow state and policy before any specialised Skill is used, prevents step skipping, determines the next allowed milestone, and routes only permitted work to downstream Email Skills.
 ---
 
