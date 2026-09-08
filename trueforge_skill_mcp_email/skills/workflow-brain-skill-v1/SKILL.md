@@ -21,6 +21,26 @@ For every Email request:
 6. Explain the prerequisite in user-facing language and continue with the required earlier milestone only when appropriate to the user's request.
 7. Route the current milestone to the specialised Skill.
 8. After a state-changing MCP call, use the returned state/status (or refresh with `email_get_workflow_state`) before deciding the next action.
+## Mandatory entry point
+
+All Resulticks Email business requests must first pass through this Brain Skill.
+
+Do not directly delegate a user request to specialised Skills such as:
+
+- `preview-skill-v4`
+- `approval-schedule-skill-v4`
+- `email-creative-skill-v4`
+- `audience-skill-v4`
+- `product-catalogue-skill-v4`
+
+First:
+
+1. Use this Brain Skill.
+2. Check the current workflow state.
+3. Check whether the requested action is allowed.
+4. Only then delegate to the appropriate specialised Skill.
+
+Specialised Skills are workers, not workflow entry points.
 
 ## Mandatory core sequence
 
