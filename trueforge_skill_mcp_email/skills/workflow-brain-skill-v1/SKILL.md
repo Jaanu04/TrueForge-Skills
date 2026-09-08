@@ -1,6 +1,6 @@
 ---
 name: workflow-brain-skill-v1
-description: Governs the Resulticks Email workflow. It reads MCP policy/state before downstream actions, prevents step skipping, identifies the next required milestone, and routes work to the specialised Email Skills.
+description: Mandatory first-entry orchestration Skill for every Resulticks Email business request. It checks MCP workflow state and policy before any specialised Skill is used, prevents step skipping, determines the next allowed milestone, and routes only permitted work to downstream Email Skills.
 ---
 
 # Resulticks Email Workflow Brain Skill
